@@ -1236,3 +1236,293 @@
     color:var(--text-muted);
     font-size:.9rem;
 }
+
+/* ==========================================
+   VanApps - components.css (Part 5)
+   Advanced UI Components
+========================================== */
+
+/* ==========================
+   PAGINATION
+========================== */
+
+.pagination-nav{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:10px;
+    margin:50px 0;
+}
+
+.pagination-nav a,
+.pagination-nav span{
+    min-width:42px;
+    height:42px;
+    padding:0 14px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border:1px solid var(--border-color);
+    border-radius:var(--radius-md);
+
+    background:var(--bg-card);
+
+    transition:var(--transition-fast);
+}
+
+.pagination-nav a:hover{
+    background:var(--primary);
+    color:#fff;
+}
+
+.pagination-nav .active{
+    background:var(--primary);
+    color:#fff;
+    border-color:var(--primary);
+}
+
+/* ==========================
+   TIMELINE
+========================== */
+
+.timeline{
+    position:relative;
+    padding-left:30px;
+}
+
+.timeline::before{
+    content:"";
+    position:absolute;
+    left:8px;
+    top:0;
+    bottom:0;
+    width:2px;
+    background:var(--border-color);
+}
+
+.timeline-item{
+    position:relative;
+    margin-bottom:30px;
+}
+
+.timeline-item::before{
+    content:"";
+    position:absolute;
+    left:-29px;
+    top:4px;
+
+    width:16px;
+    height:16px;
+
+    border-radius:50%;
+    background:var(--primary);
+}
+
+.timeline-title{
+    font-weight:600;
+    margin-bottom:6px;
+}
+
+.timeline-date{
+    color:var(--text-muted);
+    font-size:.85rem;
+    margin-bottom:8px;
+}
+
+/* ==========================
+   NOTIFICATION
+========================== */
+
+.notification{
+    display:flex;
+    align-items:flex-start;
+    gap:15px;
+
+    padding:18px;
+
+    border-radius:var(--radius-lg);
+
+    background:var(--bg-card);
+
+    border:1px solid var(--border-color);
+}
+
+.notification-icon{
+    width:44px;
+    height:44px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:rgba(22,163,74,.1);
+
+    color:var(--primary);
+
+    flex-shrink:0;
+}
+
+.notification-content{
+    flex:1;
+}
+
+/* ==========================
+   SEARCH SUGGESTION
+========================== */
+
+.search-suggestion{
+    position:absolute;
+    top:100%;
+    left:0;
+    right:0;
+
+    margin-top:8px;
+
+    background:var(--bg-card);
+
+    border:1px solid var(--border-color);
+
+    border-radius:var(--radius-lg);
+
+    overflow:hidden;
+
+    box-shadow:var(--shadow-lg);
+
+    display:none;
+}
+
+.search-suggestion.active{
+    display:block;
+}
+
+.search-suggestion a{
+    display:flex;
+    align-items:center;
+    gap:12px;
+
+    padding:14px 18px;
+}
+
+.search-suggestion a:hover{
+    background:var(--bg-hover);
+}
+
+.search-suggestion img{
+    width:42px;
+    height:42px;
+    border-radius:10px;
+}
+
+/* ==========================
+   FLOATING ACTION BUTTON
+========================== */
+
+.fab{
+    position:fixed;
+
+    right:24px;
+    bottom:24px;
+
+    width:60px;
+    height:60px;
+
+    border-radius:50%;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:var(--primary);
+
+    color:#fff;
+
+    box-shadow:var(--shadow-lg);
+
+    cursor:pointer;
+
+    transition:var(--transition-fast);
+
+    z-index:999;
+}
+
+.fab:hover{
+    background:var(--primary-dark);
+    transform:translateY(-4px);
+}
+
+/* ==========================
+   SCROLL PROGRESS
+========================== */
+
+.scroll-progress{
+    position:fixed;
+    top:0;
+    left:0;
+
+    width:0;
+    height:4px;
+
+    background:var(--primary);
+
+    z-index:9999;
+}
+
+/* ==========================
+   STATUS BADGE
+========================== */
+
+.status-online{
+    color:var(--success);
+}
+
+.status-offline{
+    color:var(--danger);
+}
+
+.status-beta{
+    color:var(--warning);
+}
+
+/* ==========================
+   DIVIDER TITLE
+========================== */
+
+.divider-title{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    margin:40px 0;
+}
+
+.divider-title::before,
+.divider-title::after{
+    content:"";
+    flex:1;
+    height:1px;
+    background:var(--border-color);
+}
+
+/* ==========================
+   REUSABLE ICON BOX
+========================== */
+
+.icon-box{
+    width:60px;
+    height:60px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    border-radius:var(--radius-lg);
+
+    background:rgba(22,163,74,.08);
+
+    color:var(--primary);
+
+    font-size:1.5rem;
+}
