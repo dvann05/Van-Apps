@@ -1086,3 +1086,290 @@ footer{
     color:#fff;
 
 }
+
+/* ==========================================
+   VanApps - style.css (Part 3B)
+   Forms, Search & Filter
+========================================== */
+
+/* ===========================
+   FORM
+=========================== */
+
+.form-group{
+    margin-bottom:20px;
+}
+
+.form-label{
+    display:block;
+    margin-bottom:8px;
+    font-weight:600;
+    color:var(--text-primary);
+}
+
+.form-control{
+    width:100%;
+    height:var(--input-height);
+    padding:0 16px;
+    border:1px solid var(--border-color);
+    border-radius:var(--radius-md);
+    background:#fff;
+    color:var(--text-primary);
+    transition:var(--transition-fast);
+}
+
+.form-control:focus{
+    border-color:var(--primary);
+    box-shadow:0 0 0 3px rgba(22,163,74,.15);
+}
+
+textarea.form-control{
+    min-height:150px;
+    padding:16px;
+    resize:vertical;
+}
+
+/* ===========================
+   SELECT
+=========================== */
+
+select.form-control{
+    cursor:pointer;
+}
+
+/* ===========================
+   SEARCH BAR
+=========================== */
+
+.search-form{
+    display:flex;
+    gap:12px;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.search-input{
+    flex:1;
+    min-width:250px;
+    position:relative;
+}
+
+.search-input input{
+    width:100%;
+    height:50px;
+    padding:0 18px;
+    border:1px solid var(--border-color);
+    border-radius:999px;
+    background:#fff;
+}
+
+.search-button{
+    height:50px;
+    padding:0 24px;
+    border-radius:999px;
+    background:var(--primary);
+    color:#fff;
+    font-weight:600;
+}
+
+.search-button:hover{
+    background:var(--primary-dark);
+}
+
+/* ===========================
+   FILTER
+=========================== */
+
+.filter-bar{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+    margin:30px 0;
+}
+
+.filter-item{
+    min-width:180px;
+}
+
+.filter-title{
+    font-size:.9rem;
+    font-weight:600;
+    margin-bottom:8px;
+}
+
+/* ===========================
+   FILTER CHIP
+=========================== */
+
+.filter-chip{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    padding:8px 16px;
+    border:1px solid var(--border-color);
+    border-radius:999px;
+    background:#fff;
+    cursor:pointer;
+    transition:var(--transition-fast);
+}
+
+.filter-chip:hover{
+    background:var(--primary);
+    color:#fff;
+}
+
+.filter-chip.active{
+    background:var(--primary);
+    color:#fff;
+    border-color:var(--primary);
+}
+
+/* ===========================
+   CHECKBOX
+=========================== */
+
+.checkbox-group{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.checkbox-item{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.checkbox-item input{
+    width:18px;
+    height:18px;
+    accent-color:var(--primary);
+}
+
+/* ===========================
+   RADIO
+=========================== */
+
+.radio-group{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+.radio-item{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.radio-item input{
+    accent-color:var(--primary);
+}
+
+/* ===========================
+   SWITCH
+=========================== */
+
+.switch{
+    position:relative;
+    width:50px;
+    height:26px;
+}
+
+.switch input{
+    display:none;
+}
+
+.slider{
+    position:absolute;
+    inset:0;
+    background:#ccc;
+    border-radius:999px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.slider::before{
+    content:"";
+    position:absolute;
+    width:20px;
+    height:20px;
+    left:3px;
+    top:3px;
+    background:#fff;
+    border-radius:50%;
+    transition:.3s;
+}
+
+.switch input:checked + .slider{
+    background:var(--primary);
+}
+
+.switch input:checked + .slider::before{
+    transform:translateX(24px);
+}
+
+/* ===========================
+   INPUT GROUP
+=========================== */
+
+.input-group{
+    display:flex;
+    align-items:center;
+}
+
+.input-group .form-control{
+    border-radius:12px 0 0 12px;
+}
+
+.input-group .btn{
+    border-radius:0 12px 12px 0;
+}
+
+/* ===========================
+   FILTER SIDEBAR
+=========================== */
+
+.filter-sidebar{
+    background:#fff;
+    border:1px solid var(--border-color);
+    border-radius:var(--radius-lg);
+    padding:20px;
+}
+
+.filter-sidebar h3{
+    margin-bottom:20px;
+}
+
+/* ===========================
+   SORT BAR
+=========================== */
+
+.sort-bar{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:25px;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+/* ===========================
+   SEARCH RESULT
+=========================== */
+
+.search-result-count{
+    color:var(--text-muted);
+    font-size:.9rem;
+}
+
+/* ===========================
+   PAGINATION INFO
+=========================== */
+
+.pagination-info{
+    text-align:center;
+    margin-top:20px;
+    color:var(--text-muted);
+    font-size:.9rem;
+}
