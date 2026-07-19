@@ -1373,3 +1373,336 @@ select.form-control{
     color:var(--text-muted);
     font-size:.9rem;
 }
+
+/* ==========================================
+   VanApps - style.css (Part 3C)
+   Modal, Alert, Tabs & Utilities
+========================================== */
+
+/* ===========================
+   MODAL
+=========================== */
+
+.modal{
+    position:fixed;
+    inset:0;
+    display:none;
+    align-items:center;
+    justify-content:center;
+    background:rgba(0,0,0,.55);
+    z-index:var(--z-modal);
+    padding:20px;
+}
+
+.modal.active{
+    display:flex;
+}
+
+.modal-content{
+    width:100%;
+    max-width:700px;
+    background:#fff;
+    border-radius:var(--radius-lg);
+    overflow:hidden;
+    box-shadow:var(--shadow-xl);
+    animation:fadeIn .3s ease;
+}
+
+.modal-header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px;
+    border-bottom:1px solid var(--border-color);
+}
+
+.modal-body{
+    padding:20px;
+}
+
+.modal-footer{
+    padding:20px;
+    border-top:1px solid var(--border-color);
+    display:flex;
+    justify-content:flex-end;
+    gap:10px;
+}
+
+.modal-close{
+    width:40px;
+    height:40px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+}
+
+.modal-close:hover{
+    background:var(--bg-hover);
+}
+
+/* ===========================
+   ALERT
+=========================== */
+
+.alert{
+    padding:16px 20px;
+    border-radius:var(--radius-md);
+    margin-bottom:20px;
+}
+
+.alert-success{
+    background:#dcfce7;
+    color:#166534;
+}
+
+.alert-danger{
+    background:#fee2e2;
+    color:#991b1b;
+}
+
+.alert-warning{
+    background:#fef9c3;
+    color:#854d0e;
+}
+
+.alert-info{
+    background:#dbeafe;
+    color:#1e40af;
+}
+
+/* ===========================
+   TABS
+=========================== */
+
+.tabs{
+    display:flex;
+    gap:12px;
+    border-bottom:1px solid var(--border-color);
+    margin-bottom:25px;
+    overflow-x:auto;
+}
+
+.tab-button{
+    padding:12px 20px;
+    white-space:nowrap;
+    border-bottom:3px solid transparent;
+    cursor:pointer;
+    transition:var(--transition-fast);
+}
+
+.tab-button:hover{
+    color:var(--primary);
+}
+
+.tab-button.active{
+    color:var(--primary);
+    border-color:var(--primary);
+}
+
+.tab-content{
+    display:none;
+}
+
+.tab-content.active{
+    display:block;
+}
+
+/* ===========================
+   ACCORDION
+=========================== */
+
+.accordion{
+    border:1px solid var(--border-color);
+    border-radius:var(--radius-lg);
+    overflow:hidden;
+}
+
+.accordion-item + .accordion-item{
+    border-top:1px solid var(--border-color);
+}
+
+.accordion-header{
+    padding:18px 20px;
+    cursor:pointer;
+    background:#fff;
+    font-weight:600;
+}
+
+.accordion-header:hover{
+    background:var(--bg-hover);
+}
+
+.accordion-body{
+    display:none;
+    padding:20px;
+    background:#fafafa;
+}
+
+.accordion-item.active .accordion-body{
+    display:block;
+}
+
+/* ===========================
+   TOOLTIP
+=========================== */
+
+.tooltip{
+    position:relative;
+}
+
+.tooltip:hover::after{
+    content:attr(data-tooltip);
+    position:absolute;
+    bottom:110%;
+    left:50%;
+    transform:translateX(-50%);
+    background:#111827;
+    color:#fff;
+    padding:6px 10px;
+    border-radius:6px;
+    font-size:.75rem;
+    white-space:nowrap;
+}
+
+/* ===========================
+   LOADING
+=========================== */
+
+.loading{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    padding:50px;
+}
+
+.spinner{
+    width:45px;
+    height:45px;
+    border:4px solid #e5e7eb;
+    border-top:4px solid var(--primary);
+    border-radius:50%;
+    animation:spin 1s linear infinite;
+}
+
+/* ===========================
+   PROGRESS
+=========================== */
+
+.progress{
+    width:100%;
+    height:10px;
+    background:#e5e7eb;
+    border-radius:999px;
+    overflow:hidden;
+}
+
+.progress-bar{
+    height:100%;
+    background:var(--primary);
+    width:0;
+}
+
+/* ===========================
+   EMPTY STATE
+=========================== */
+
+.empty-state{
+    text-align:center;
+    padding:80px 20px;
+}
+
+.empty-state img{
+    width:180px;
+    margin:auto auto 25px;
+}
+
+.empty-state h2{
+    margin-bottom:10px;
+}
+
+.empty-state p{
+    max-width:500px;
+    margin:auto;
+}
+
+/* ===========================
+   TOAST
+=========================== */
+
+.toast{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    min-width:280px;
+    padding:16px 20px;
+    background:#111827;
+    color:#fff;
+    border-radius:var(--radius-md);
+    box-shadow:var(--shadow-lg);
+    z-index:var(--z-tooltip);
+}
+
+/* ===========================
+   BACK TO TOP
+=========================== */
+
+.back-to-top{
+    position:fixed;
+    right:20px;
+    bottom:90px;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:var(--primary);
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    box-shadow:var(--shadow-lg);
+    cursor:pointer;
+    transition:var(--transition-fast);
+}
+
+.back-to-top:hover{
+    background:var(--primary-dark);
+}
+
+/* ===========================
+   DIVIDER
+=========================== */
+
+.divider{
+    width:100%;
+    height:1px;
+    background:var(--border-color);
+    margin:30px 0;
+}
+
+/* ===========================
+   SKELETON LOADING
+=========================== */
+
+.skeleton{
+    background:linear-gradient(
+        90deg,
+        #f3f4f6 25%,
+        #e5e7eb 50%,
+        #f3f4f6 75%
+    );
+    background-size:200% 100%;
+    animation:skeleton-loading 1.5s infinite;
+    border-radius:var(--radius-sm);
+}
+
+.skeleton-text{
+    width:100%;
+    height:14px;
+    margin-bottom:10px;
+}
+
+.skeleton-image{
+    width:100%;
+    aspect-ratio:16/9;
+}
