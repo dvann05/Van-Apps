@@ -1,33 +1,38 @@
 <!DOCTYPE html>
-<html lang="id">
-
+<html lang="en">
 <head>
+    <!-- Basic -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>VanApps | Download Aplikasi, Game & Software Terbaru</title>
+    <title>VanApps - Download Android Apps, Games, AI Tools & Software</title>
 
     <meta name="description"
-        content="VanApps adalah pusat download aplikasi, game Android, software Windows, AI Tools, emulator, dan berbagai utilitas terbaru dengan cepat, aman, dan gratis.">
+        content="Download the latest Android Apps, Games, AI Tools, Software and Emulators safely with fast download links on VanApps.">
 
     <meta name="keywords"
-        content="VanApps, APK, Game Android, Game PC, Software Windows, AI Tools, Emulator, Download APK, Download Game, Software Gratis">
+        content="apk download, android apps, games, ai tools, emulator, software, vanapps">
 
     <meta name="author" content="VanApps">
-    <meta name="theme-color" content="#16a34a">
+
+    <meta name="robots" content="index,follow">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="VanApps | Download Aplikasi, Game & Software">
-    <meta property="og:description"
-        content="Temukan ribuan aplikasi, game, software PC, AI Tools, emulator, dan berbagai utilitas terbaru di VanApps.">
     <meta property="og:type" content="website">
+    <meta property="og:title" content="VanApps">
+    <meta property="og:description"
+        content="Download Android Apps, Games, AI Tools and Software safely.">
+    <meta property="og:image" content="assets/images/cover.webp">
+    <meta property="og:url" content="https://yourdomain.com">
 
-    <!-- Icon -->
-    <link rel="icon" href="assets/images/logo/favicon.png">
-    <link rel="apple-touch-icon" href="assets/images/logo/icon-192.png">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
 
-    <!-- PWA -->
-    <link rel="manifest" href="manifest.json">
+    <!-- Canonical -->
+    <link rel="canonical" href="https://yourdomain.com">
+
+    <!-- Favicon -->
+    <link rel="icon" href="assets/images/favicon.png">
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/variables.css">
@@ -35,78 +40,120 @@
     <link rel="stylesheet" href="assets/css/components.css">
     <link rel="stylesheet" href="assets/css/animation.css">
     <link rel="stylesheet" href="assets/css/responsive.css">
+    <link rel="stylesheet" href="assets/css/darkmode.css">
 </head>
 
 <body>
 
-    <!-- Header -->
-    <header id="header"></header>
+<!-- Scroll Progress -->
 
-    <!-- Main -->
-    <main>
+<div class="scroll-progress" id="scrollProgress"></div>
 
-        <!-- Hero Banner -->
-        <section class="hero"></section>
+<!-- ==========================
+     HEADER
+========================== -->
+
+<header class="site-header">
+
+    <div class="header-wrapper">
+
+        <!-- Logo -->
+
+        <a href="index.html" class="site-logo">
+
+            <img src="assets/images/logo.webp"
+                 alt="VanApps Logo">
+
+            <span>VanApps</span>
+
+        </a>
+
+        <!-- Navigation -->
+
+        <nav class="main-nav">
+
+            <ul>
+
+                <li>
+                    <a href="index.html" class="active">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="apps.html">
+                        Apps
+                    </a>
+                </li>
+
+                <li>
+                    <a href="games.html">
+                        Games
+                    </a>
+                </li>
+
+                <li>
+                    <a href="software.html">
+                        Software
+                    </a>
+                </li>
+
+                <li>
+                    <a href="ai-tools.html">
+                        AI Tools
+                    </a>
+                </li>
+
+                <li>
+                    <a href="emulators.html">
+                        Emulators
+                    </a>
+                </li>
+
+            </ul>
+
+        </nav>
 
         <!-- Search -->
-        <section class="search-section"></section>
 
-        <!-- Featured -->
-        <section class="featured-apps"></section>
+        <form class="header-search">
 
-        <!-- Featured Games -->
-        <section class="featured-games"></section>
+            <input
+                type="search"
+                placeholder="Search apps...">
 
-        <!-- Latest Apps -->
-        <section class="latest-apps"></section>
+            <button type="submit">
 
-        <!-- Latest Games -->
-        <section class="latest-games"></section>
+                🔍
 
-        <!-- Popular Downloads -->
-        <section class="popular-downloads"></section>
+            </button>
 
-        <!-- Categories -->
-        <section class="categories"></section>
+        </form>
 
-        <!-- AI Tools -->
-        <section class="ai-tools"></section>
+        <!-- Header Actions -->
 
-        <!-- Windows Software -->
-        <section class="windows-software"></section>
+        <div class="header-actions">
 
-        <!-- Android Apps -->
-        <section class="android-apps"></section>
+            <button class="header-icon">
 
-        <!-- Android Games -->
-        <section class="android-games"></section>
+                🌙
 
-        <!-- Emulator -->
-        <section class="emulators"></section>
+            </button>
 
-        <!-- Top Rated -->
-        <section class="top-rated"></section>
+            <button class="menu-toggle">
 
-        <!-- New Updates -->
-        <section class="new-updates"></section>
+                ☰
 
-        <!-- Newsletter -->
-        <section class="newsletter"></section>
+            </button>
 
-    </main>
+        </div>
 
-    <!-- Footer -->
-    <footer id="footer"></footer>
+    </div>
 
-    <!-- JavaScript -->
-    <script src="assets/js/utils.js"></script>
-    <script src="assets/js/app.js"></script>
-    <script src="assets/js/apps.js"></script>
-    <script src="assets/js/search.js"></script>
-    <script src="assets/js/category.js"></script>
-    <script src="assets/js/darkmode.js"></script>
-    <script src="assets/js/install.js"></script>
+</header>
 
-</body>
+<!-- ==========================
+     MAIN
+========================== -->
 
-</html>
+<main>
