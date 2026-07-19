@@ -198,5 +198,17 @@
         <p>&copy; 2026 PlayStoreWeb Clone. Dibuat dengan HTML & Tailwind CSS.</p>
     </footer>
 
+<!-- MODAL POP-UP DETAIL -->
+<div id="detail-modal" class="fixed inset-0 bg-black/50 z-50 flex items-center justify-center hidden p-4">
+    <div class="bg-white rounded-2xl max-w-lg w-full p-6 relative animate-in fade-in zoom-in-95 duration-200">
+        <button onclick="closeModal()" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600">
+            <i class="fa-solid fa-xmark text-xl"></i>
+        </button>
+        <div class="flex space-x-4" id="modal-content">
+            <!-- Detail aplikasi akan muncul di sini -->
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
