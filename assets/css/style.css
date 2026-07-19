@@ -1,0 +1,1088 @@
+/* ==========================================
+   VanApps - style.css (Part 1)
+   Reset + Base Layout
+========================================== */
+
+/* ===========================
+   RESET
+=========================== */
+
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    font-size:16px;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:var(--font-family);
+    font-size:var(--fs-md);
+    line-height:var(--lh-md);
+    color:var(--text-primary);
+    background:var(--bg-color);
+    overflow-x:hidden;
+    min-height:100vh;
+    text-rendering:optimizeLegibility;
+    -webkit-font-smoothing:antialiased;
+    -moz-osx-font-smoothing:grayscale;
+}
+
+/* ===========================
+   SELECTION
+=========================== */
+
+::selection{
+    background:var(--primary);
+    color:#fff;
+}
+
+::-moz-selection{
+    background:var(--primary);
+    color:#fff;
+}
+
+/* ===========================
+   SCROLLBAR
+=========================== */
+
+::-webkit-scrollbar{
+    width:10px;
+}
+
+::-webkit-scrollbar-track{
+    background:#ececec;
+}
+
+::-webkit-scrollbar-thumb{
+    background:var(--primary);
+    border-radius:999px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+    background:var(--primary-dark);
+}
+
+/* ===========================
+   IMAGES
+=========================== */
+
+img{
+    max-width:100%;
+    display:block;
+    height:auto;
+}
+
+picture{
+    display:block;
+}
+
+svg{
+    display:block;
+}
+
+/* ===========================
+   LINK
+=========================== */
+
+a{
+    text-decoration:none;
+    color:inherit;
+    transition:var(--transition-fast);
+}
+
+a:hover{
+    color:var(--primary);
+}
+
+/* ===========================
+   LIST
+=========================== */
+
+ul,
+ol{
+    list-style:none;
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+button{
+    font-family:inherit;
+    border:none;
+    outline:none;
+    cursor:pointer;
+    background:none;
+}
+
+/* ===========================
+   INPUT
+=========================== */
+
+input,
+textarea,
+select{
+    font-family:inherit;
+    outline:none;
+}
+
+textarea{
+    resize:vertical;
+}
+
+/* ===========================
+   TABLE
+=========================== */
+
+table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+/* ===========================
+   TYPOGRAPHY
+=========================== */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    color:var(--text-primary);
+    font-weight:var(--fw-bold);
+    line-height:1.3;
+}
+
+h1{
+    font-size:var(--fs-4xl);
+}
+
+h2{
+    font-size:var(--fs-3xl);
+}
+
+h3{
+    font-size:var(--fs-2xl);
+}
+
+h4{
+    font-size:var(--fs-xl);
+}
+
+h5{
+    font-size:var(--fs-lg);
+}
+
+h6{
+    font-size:var(--fs-md);
+}
+
+p{
+    color:var(--text-secondary);
+    line-height:1.8;
+}
+
+/* ===========================
+   CONTAINER
+=========================== */
+
+.container{
+    width:100%;
+    max-width:var(--container-xl);
+    margin:auto;
+    padding-inline:20px;
+}
+
+.container-fluid{
+    width:100%;
+    padding-inline:20px;
+}
+
+/* ===========================
+   SECTION
+=========================== */
+
+section{
+    padding:70px 0;
+    position:relative;
+}
+
+.section-title{
+    margin-bottom:40px;
+}
+
+.section-title h2{
+    margin-bottom:10px;
+}
+
+.section-title p{
+    max-width:650px;
+}
+
+/* ===========================
+   GRID
+=========================== */
+
+.grid{
+    display:grid;
+    gap:24px;
+}
+
+.grid-2{
+    grid-template-columns:repeat(2,1fr);
+}
+
+.grid-3{
+    grid-template-columns:repeat(3,1fr);
+}
+
+.grid-4{
+    grid-template-columns:repeat(4,1fr);
+}
+
+.grid-5{
+    grid-template-columns:repeat(5,1fr);
+}
+
+/* ===========================
+   FLEX
+=========================== */
+
+.flex{
+    display:flex;
+}
+
+.flex-center{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.flex-between{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.flex-column{
+    display:flex;
+    flex-direction:column;
+}
+
+/* ===========================
+   SPACING
+=========================== */
+
+.mt-1{margin-top:10px;}
+.mt-2{margin-top:20px;}
+.mt-3{margin-top:30px;}
+.mt-4{margin-top:40px;}
+.mt-5{margin-top:50px;}
+
+.mb-1{margin-bottom:10px;}
+.mb-2{margin-bottom:20px;}
+.mb-3{margin-bottom:30px;}
+.mb-4{margin-bottom:40px;}
+.mb-5{margin-bottom:50px;}
+
+.pt-1{padding-top:10px;}
+.pt-2{padding-top:20px;}
+.pt-3{padding-top:30px;}
+.pt-4{padding-top:40px;}
+.pt-5{padding-top:50px;}
+
+.pb-1{padding-bottom:10px;}
+.pb-2{padding-bottom:20px;}
+.pb-3{padding-bottom:30px;}
+.pb-4{padding-bottom:40px;}
+.pb-5{padding-bottom:50px;}
+
+/* ===========================
+   TEXT
+=========================== */
+
+.text-center{
+    text-align:center;
+}
+
+.text-left{
+    text-align:left;
+}
+
+.text-right{
+    text-align:right;
+}
+
+.text-primary{
+    color:var(--primary);
+}
+
+.text-secondary{
+    color:var(--text-secondary);
+}
+
+.text-white{
+    color:#fff;
+}
+
+/* ===========================
+   BACKGROUND
+=========================== */
+
+.bg-primary{
+    background:var(--primary);
+}
+
+.bg-white{
+    background:#fff;
+}
+
+/* ==========================================
+   VanApps - style.css (Part 2)
+   Layout
+========================================== */
+
+/* ===========================
+   HEADER
+=========================== */
+
+header{
+    width:100%;
+    background:var(--bg-secondary);
+    box-shadow:var(--shadow-sm);
+    position:sticky;
+    top:0;
+    left:0;
+    z-index:var(--z-sticky);
+}
+
+.header-container{
+    max-width:var(--container-xl);
+    height:var(--header-height);
+    margin:auto;
+    padding:0 20px;
+
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+}
+
+.logo{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo img{
+    width:42px;
+    height:42px;
+    object-fit:contain;
+}
+
+.logo h1{
+    font-size:1.4rem;
+    color:var(--primary);
+}
+
+/* ===========================
+   NAVIGATION
+=========================== */
+
+nav ul{
+    display:flex;
+    align-items:center;
+    gap:24px;
+}
+
+nav li{
+    list-style:none;
+}
+
+nav a{
+    color:var(--text-primary);
+    font-weight:500;
+    transition:var(--transition-fast);
+}
+
+nav a:hover,
+nav a.active{
+    color:var(--primary);
+}
+
+/* ===========================
+   HEADER ACTION
+=========================== */
+
+.header-actions{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+    padding:80px 0;
+    background:linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+    color:#fff;
+}
+
+.hero-content{
+    max-width:700px;
+}
+
+.hero h1{
+    color:#fff;
+    margin-bottom:20px;
+}
+
+.hero p{
+    color:rgba(255,255,255,.9);
+    margin-bottom:30px;
+}
+
+/* ===========================
+   BANNER
+=========================== */
+
+.banner{
+    width:100%;
+    border-radius:var(--radius-lg);
+    overflow:hidden;
+    margin:30px 0;
+}
+
+.banner img{
+    width:100%;
+    display:block;
+}
+
+/* ===========================
+   SEARCH
+=========================== */
+
+.search-section{
+    margin:40px 0;
+}
+
+.search-box{
+    display:flex;
+    align-items:center;
+    background:#fff;
+    border:1px solid var(--border-color);
+    border-radius:var(--radius-full);
+    overflow:hidden;
+    box-shadow:var(--shadow-sm);
+}
+
+.search-box input{
+    flex:1;
+    border:none;
+    padding:16px 20px;
+    font-size:1rem;
+    background:none;
+}
+
+.search-box button{
+    padding:16px 22px;
+    background:var(--primary);
+    color:#fff;
+}
+
+.search-box button:hover{
+    background:var(--primary-dark);
+}
+
+/* ===========================
+   BREADCRUMB
+=========================== */
+
+.breadcrumb{
+    padding:18px 0;
+    font-size:.9rem;
+}
+
+.breadcrumb ul{
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
+}
+
+.breadcrumb li{
+    color:var(--text-muted);
+}
+
+.breadcrumb li:last-child{
+    color:var(--primary);
+}
+
+/* ===========================
+   PAGE TITLE
+=========================== */
+
+.page-title{
+    margin-bottom:40px;
+}
+
+.page-title h1{
+    margin-bottom:10px;
+}
+
+.page-title p{
+    max-width:700px;
+}
+
+/* ===========================
+   MAIN CONTENT
+=========================== */
+
+.main-layout{
+    display:grid;
+    grid-template-columns:1fr 300px;
+    gap:30px;
+}
+
+/* ===========================
+   SIDEBAR
+=========================== */
+
+.sidebar{
+    display:flex;
+    flex-direction:column;
+    gap:24px;
+}
+
+/* ===========================
+   CONTENT
+=========================== */
+
+.content{
+    display:flex;
+    flex-direction:column;
+    gap:30px;
+}
+
+/* ===========================
+   SECTION SPACING
+=========================== */
+
+.featured-apps,
+.featured-games,
+.featured-software,
+.featured-ai,
+.featured-emulators,
+
+.latest-apps,
+.latest-games,
+.latest-software,
+.latest-ai,
+.latest-emulators,
+
+.trending-apps,
+.trending-games,
+.trending-software,
+.trending-ai,
+.trending-emulators,
+
+.popular-downloads,
+.category-items,
+.related-downloads{
+
+    margin-top:50px;
+}
+
+/* ===========================
+   PAGINATION
+=========================== */
+
+.pagination{
+    margin-top:50px;
+
+    display:flex;
+    justify-content:center;
+    gap:10px;
+}
+
+.pagination a{
+
+    width:42px;
+    height:42px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+
+    background:#fff;
+
+    border-radius:50%;
+
+    box-shadow:var(--shadow-sm);
+
+    transition:var(--transition-fast);
+
+}
+
+.pagination a:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+.pagination a.active{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+
+    margin-top:80px;
+
+    background:var(--bg-footer);
+
+    color:#fff;
+
+}
+
+.footer-container{
+
+    max-width:var(--container-xl);
+
+    margin:auto;
+
+    padding:60px 20px;
+
+}
+
+.footer-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(4,1fr);
+
+    gap:40px;
+
+}
+
+.footer-title{
+
+    margin-bottom:18px;
+
+    color:#fff;
+
+}
+
+.footer-links{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+.footer-links a{
+
+    color:#d1d5db;
+
+}
+
+.footer-links a:hover{
+
+    color:#fff;
+
+}
+
+.footer-bottom{
+
+    border-top:1px solid rgba(255,255,255,.1);
+
+    text-align:center;
+
+    padding:20px;
+
+    color:#9ca3af;
+
+}
+.bg-light{
+    background:var(--bg-hover);
+}
+
+/* ===========================
+   DISPLAY
+=========================== */
+
+.hidden{
+    display:none;
+}
+
+.block{
+    display:block;
+}
+
+.inline-block{
+    display:inline-block;
+}
+
+/* ==========================================
+   VanApps - style.css (Part 3A)
+   Cards, Buttons, Badge & Rating
+========================================== */
+
+/* ===========================
+   CARD
+=========================== */
+
+.card{
+    background:var(--bg-card);
+    border:1px solid var(--border-color);
+    border-radius:var(--radius-lg);
+    overflow:hidden;
+    box-shadow:var(--shadow-sm);
+    transition:var(--transition-normal);
+}
+
+.card:hover{
+    transform:translateY(-5px);
+    box-shadow:var(--shadow-lg);
+}
+
+/* ===========================
+   DOWNLOAD CARD
+=========================== */
+
+.download-card{
+    background:#fff;
+    border-radius:var(--radius-lg);
+    border:1px solid var(--border-color);
+    overflow:hidden;
+    transition:var(--transition-normal);
+}
+
+.download-card:hover{
+    box-shadow:var(--shadow-lg);
+}
+
+.download-card-image{
+    position:relative;
+    overflow:hidden;
+}
+
+.download-card-image img{
+    width:100%;
+    aspect-ratio:16/9;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.download-card:hover img{
+    transform:scale(1.05);
+}
+
+.download-card-body{
+    padding:20px;
+}
+
+.download-card-title{
+    font-size:1.1rem;
+    font-weight:600;
+    margin-bottom:8px;
+}
+
+.download-card-title a:hover{
+    color:var(--primary);
+}
+
+.download-card-description{
+    color:var(--text-secondary);
+    font-size:.9rem;
+    margin-bottom:15px;
+}
+
+.download-card-footer{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+}
+
+/* ===========================
+   APP ICON
+=========================== */
+
+.app-icon{
+    width:72px;
+    height:72px;
+    border-radius:18px;
+    overflow:hidden;
+    background:#fff;
+    box-shadow:var(--shadow-sm);
+}
+
+.app-icon img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.btn{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+
+    padding:12px 22px;
+
+    border-radius:var(--radius-full);
+
+    cursor:pointer;
+
+    transition:var(--transition-fast);
+
+    font-weight:600;
+}
+
+.btn-primary{
+    background:var(--primary);
+    color:#fff;
+}
+
+.btn-primary:hover{
+    background:var(--primary-dark);
+}
+
+.btn-secondary{
+    background:var(--secondary);
+    color:#fff;
+}
+
+.btn-secondary:hover{
+    background:var(--secondary-dark);
+}
+
+.btn-outline{
+    border:2px solid var(--primary);
+    color:var(--primary);
+    background:transparent;
+}
+
+.btn-outline:hover{
+    background:var(--primary);
+    color:#fff;
+}
+
+.btn-light{
+    background:#f5f5f5;
+}
+
+.btn-light:hover{
+    background:#ececec;
+}
+
+.btn-danger{
+    background:var(--danger);
+    color:#fff;
+}
+
+.btn-danger:hover{
+    opacity:.9;
+}
+
+/* ===========================
+   DOWNLOAD BUTTON
+=========================== */
+
+.btn-download{
+    width:100%;
+    padding:14px;
+    background:var(--primary);
+    color:#fff;
+    border-radius:var(--radius-md);
+    font-weight:600;
+    text-align:center;
+}
+
+.btn-download:hover{
+    background:var(--primary-dark);
+}
+
+/* ===========================
+   BADGE
+=========================== */
+
+.badge{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+
+    padding:6px 12px;
+
+    border-radius:999px;
+
+    font-size:.75rem;
+
+    font-weight:600;
+}
+
+.badge-primary{
+    background:var(--primary);
+    color:#fff;
+}
+
+.badge-success{
+    background:var(--success);
+    color:#fff;
+}
+
+.badge-warning{
+    background:var(--warning);
+    color:#111;
+}
+
+.badge-danger{
+    background:var(--danger);
+    color:#fff;
+}
+
+.badge-info{
+    background:var(--info);
+    color:#fff;
+}
+
+/* ===========================
+   TAG
+=========================== */
+
+.tag{
+    display:inline-block;
+    padding:6px 14px;
+    background:#f1f5f9;
+    border-radius:999px;
+    font-size:.8rem;
+    color:var(--text-secondary);
+    transition:.3s;
+}
+
+.tag:hover{
+    background:var(--primary);
+    color:#fff;
+}
+
+/* ===========================
+   RATING
+=========================== */
+
+.rating{
+    display:flex;
+    align-items:center;
+    gap:6px;
+}
+
+.rating-stars{
+    color:#f59e0b;
+    font-size:.95rem;
+}
+
+.rating-score{
+    font-size:.9rem;
+    font-weight:600;
+}
+
+/* ===========================
+   DOWNLOAD INFO
+=========================== */
+
+.download-meta{
+
+    display:flex;
+
+    gap:15px;
+
+    flex-wrap:wrap;
+
+    color:var(--text-muted);
+
+    font-size:.85rem;
+
+}
+
+.download-meta span{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:5px;
+
+}
+
+/* ===========================
+   ACTION BUTTON
+=========================== */
+
+.action-buttons{
+
+    display:flex;
+
+    gap:10px;
+
+    flex-wrap:wrap;
+
+}
+
+.action-btn{
+
+    width:42px;
+
+    height:42px;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    border-radius:50%;
+
+    background:#fff;
+
+    border:1px solid var(--border-color);
+
+    transition:.3s;
+
+}
+
+.action-btn:hover{
+
+    background:var(--primary);
+
+    color:#fff;
+
+}
