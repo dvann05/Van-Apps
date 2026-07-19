@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>G-Play Store Clone</title>
+    <!-- Menggunakan Tailwind CSS untuk desain cepat & modern -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome untuk ikon pencarian, bintang, dll -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-gray-50 font-sans text-gray-800">
+
+    <!-- NAV BAR / HEADER -->
+    <nav class="sticky top-0 z-50 bg-white border-b border-gray-200 px-4 py-3 flex items-center justify-between">
+        <div class="flex items-center space-x-6">
+            <!-- Logo & Nama Web -->
+            <div class="flex items-center space-x-2 cursor-pointer">
+                <div class="bg-green-600 text-white p-2 rounded-lg font-bold text-xl tracking-wider">
+                    <i class="fa-solid fa-play"></i>
+                </div>
+                <span class="font-semibold text-xl text-gray-700 hidden sm:block">PlayStore<span class="text-green-600">Web</span></span>
+            </div>
+            
+            <!-- Menu Navigasi Utama -->
+            <div class="hidden md:flex space-x-6 text-sm font-medium text-gray-600">
+                <a href="#" class="text-green-600 border-b-2 border-green-600 pb-4 transition">Game</a>
+                <a href="#" class="hover:text-green-600 pb-4 transition">Aplikasi</a>
+                <a href="#" class="hover:text-green-600 pb-4 transition">Film</a>
+            </div>
+        </div>
+
+        <!-- Kolom Pencarian / Search Bar -->
+        <div class="flex-1 max-w-xl mx-4">
+            <div class="relative">
+                <span class="absolute inset-y-0 left-0 flex items-center pl-3 text-gray-400">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </span>
+                <input type="text" placeholder="Cari aplikasi atau game..." 
+                       class="w-full pl-10 pr-4 py-2 bg-gray-100 focus:bg-white border border-transparent focus:border-gray-300 rounded-full text-sm focus:outline-none transition">
+            </div>
+        </div>
+
+        <!-- Profil Pengguna / Menu Kanan -->
+        <div class="flex items-center space-x-4">
+            <button class="text-gray-500 hover:text-gray-700">
+                <i class="fa-regular fa-circle-question text-xl"></i>
+            </button>
+            <div class="w-8 h-8 rounded-full bg-green-700 text-white flex items-center justify-center font-bold text-sm cursor-pointer">
+                U
+            </div>
+        </div>
+    </nav>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="max-w-7xl mx-auto px-4 py-6">
+
+        <!-- BANNER FITUR / HIGHLIGHT -->
+        <div class="bg-gradient-to-r from-green-600 to-teal-700 rounded-2xl p-6 md:p-10 text-white mb-8 shadow-sm">
+            <div class="max-w-md">
+                <span class="bg-white/20 text-xs uppercase tracking-wider px-2 py-1 rounded-full font-semibold">Pilihan Editor</span>
+                <h1 class="text-2xl md:text-4xl font-bold mt-3 leading-tight">Jelajahi Dunia Animasi & Kreativitas</h1>
+                <p class="text-white/80 mt-2 text-sm md:text-base">Temukan aplikasi editing video dan tools animasi terbaik tahun ini langsung di browser kamu.</p>
+                <button class="mt-5 bg-white text-green-700 font-semibold px-5 py-2 rounded-lg text-sm hover:bg-gray-100 transition shadow-md">
+                    Lihat Selengkapnya
+                </button>
+            </div>
+        </div>
+
+        <!-- SECTION: GAME POPULER -->
+        <section class="mb-10">
+            <div class="flex justify-between items-center mb-4">
+                <h2 class="text-xl font-bold text-gray-800">Game Populer & Disarankan</h2>
+                <a href="#" class="text-sm font-semibold text-green-600 hover:underline">Lihat semua</a>
+            </div>
+
+            <!-- GRID KARTU APLIKASI -->
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+                
+                <!-- Kartu 1 -->
+                <div class="bg-white p-3 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition cursor-pointer group flex flex-col justify-between">
+                    <div>
+                        <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden mb-3">
+                            <!-- Placeholder Gambar Ikon Aplikasi -->
+                            <img src="https://images.unsplash.com/photo-1612287230202-1bf1d85d1bdf?w=150&auto=format&fit=crop&q=60" alt="Icon" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        </div>
+                        <h3 class="font-semibold text-sm text-gray-800 truncate">Petualangan Roblox</h3>
+                        <p class="text-xs text-gray-400 mt-0.5">Studio Game Indo</p>
+                    </div>
+                    <div class="mt-2 flex items-center justify-between">
+                        <div class="flex items-center text-xs text-gray-600">
+                            <span class="font-medium">4.7</span>
+                            <i class="fa-solid fa-star text-amber-500 text-[10px] ml-1"></i>
+                        </div>
+                        <span class="text-[11px] bg-green-50 text-green-700 px-2 py-0.5 rounded font-medium">Gratis</span>
+                    </div>
+                </div>
+
+                <!-- Kartu 2 -->
+                <div class="bg-white p-3 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition cursor-pointer group flex flex-col justify-between">
+                    <div>
+                        <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden mb-3">
+                            <img src="https://images.unsplash.com/photo-1551103782-8ab07afd45c1?w=150&auto=format&fit=crop&q=60" alt="Icon" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        </div>
+                        <h3 class="font-semibold text-sm text-gray-800 truncate">Stickman Arena 3D</h3>
+                        <p class="text-xs text-gray-400 mt-0.5">Animation Lab</p>
+                    </div>
+                    <div class="mt-2 flex items-center justify-between">
+                        <div class="flex items-center text-xs text-gray-600">
+                            <span class="font-medium">4.5</span>
+                            <i class="fa-solid fa-star text-amber-500 text-[10px] ml-1"></i>
+                        </div>
+                        <span class="text-[11px] bg-green-50 text-green-700 px-2 py-0.5 rounded font-medium">Gratis</span>
+                    </div>
+                </div>
+
+                <!-- Kartu 3 -->
+                <div class="bg-white p-3 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition cursor-pointer group flex flex-col justify-between">
+                    <div>
+                        <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden mb-3">
+                            <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=150&auto=format&fit=crop&q=60" alt="Icon" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        </div>
+                        <h3 class="font-semibold text-sm text-gray-800 truncate">Lentera Sejarah Quiz</h3>
+                        <p class="text-xs text-gray-400 mt-0.5">Edu Media</p>
+                    </div>
+                    <div class="mt-2 flex items-center justify-between">
+                        <div class="flex items-center text-xs text-gray-600">
+                            <span class="font-medium">4.9</span>
+                            <i class="fa-solid fa-star text-amber-500 text-[10px] ml-1"></i>
+                        </div>
+                        <span class="text-[11px] bg-green-50 text-green-700 px-2 py-0.5 rounded font-medium">Gratis</span>
+                    </div>
+                </div>
+
+                <!-- Kartu 4 (Duplikasi untuk mengisi grid) -->
+                <div class="bg-white p-3 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition cursor-pointer group flex flex-col justify-between">
+                    <div>
+                        <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden mb-3">
+                            <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=150&auto=format&fit=crop&q=60" alt="Icon" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        </div>
+                        <h3 class="font-semibold text-sm text-gray-800 truncate">Pixel Creator 2D</h3>
+                        <p class="text-xs text-gray-400 mt-0.5">Pixel Arts</p>
+                    </div>
+                    <div class="mt-2 flex items-center justify-between">
+                        <div class="flex items-center text-xs text-gray-600">
+                            <span class="font-medium">4.2</span>
+                            <i class="fa-solid fa-star text-amber-500 text-[10px] ml-1"></i>
+                        </div>
+                        <span class="text-[11px] bg-blue-50 text-blue-700 px-2 py-0.5 rounded font-medium">Premium</span>
+                    </div>
+                </div>
+
+                <!-- Kartu 5 -->
+                <div class="bg-white p-3 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition cursor-pointer group flex flex-col justify-between">
+                    <div>
+                        <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden mb-3">
+                            <img src="https://images.unsplash.com/photo-1566241477600-ac026ad43874?w=150&auto=format&fit=crop&q=60" alt="Icon" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        </div>
+                        <h3 class="font-semibold text-sm text-gray-800 truncate">Horror Mystery Escape</h3>
+                        <p class="text-xs text-gray-400 mt-0.5">Creepy Studio</p>
+                    </div>
+                    <div class="mt-2 flex items-center justify-between">
+                        <div class="flex items-center text-xs text-gray-600">
+                            <span class="font-medium">4.6</span>
+                            <i class="fa-solid fa-star text-amber-500 text-[10px] ml-1"></i>
+                        </div>
+                        <span class="text-[11px] bg-green-50 text-green-700 px-2 py-0.5 rounded font-medium">Gratis</span>
+                    </div>
+                </div>
+
+                <!-- Kartu 6 -->
+                <div class="bg-white p-3 rounded-xl border border-gray-100 shadow-sm hover:shadow-md transition cursor-pointer group flex flex-col justify-between">
+                    <div>
+                        <div class="aspect-square bg-gray-200 rounded-lg overflow-hidden mb-3">
+                            <img src="https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=150&auto=format&fit=crop&q=60" alt="Icon" class="w-full h-full object-cover group-hover:scale-105 transition duration-300">
+                        </div>
+                        <h3 class="font-semibold text-sm text-gray-800 truncate">Music Beat Maker</h3>
+                        <p class="text-xs text-gray-400 mt-0.5">Sound Wave</p>
+                    </div>
+                    <div class="mt-2 flex items-center justify-between">
+                        <div class="flex items-center text-xs text-gray-600">
+                            <span class="font-medium">4.8</span>
+                            <i class="fa-solid fa-star text-amber-500 text-[10px] ml-1"></i>
+                        </div>
+                        <span class="text-[11px] bg-green-50 text-green-700 px-2 py-0.5 rounded font-medium">Gratis</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER Sederhana -->
+    <footer class="bg-white border-t border-gray-200 mt-12 py-6 text-center text-xs text-gray-400">
+        <p>&copy; 2026 PlayStoreWeb Clone. Dibuat dengan HTML & Tailwind CSS.</p>
+    </footer>
+
+</body>
+</html>
